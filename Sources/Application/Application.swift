@@ -1,5 +1,6 @@
 import Kitura
 import Dispatch
+import KituraOpenAPI
 
 public class App
 {
@@ -15,6 +16,8 @@ public class App
     func postInit() throws
     {
         initializeCodableRoutes(app: self)
+        initializeKueryRoutes(app: self)
+        KituraOpenAPI.addEndpoints(to: router)
     }
     
     public func run() throws
