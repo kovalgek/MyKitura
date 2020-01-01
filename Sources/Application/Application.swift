@@ -18,6 +18,7 @@ public class App
         initializeCodableRoutes(app: self)
         initializeKueryRoutes(app: self)
         KituraOpenAPI.addEndpoints(to: router)
+        initializeTypeSafeAuthRoutes(app: self)
     }
     
     public func run() throws
